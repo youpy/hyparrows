@@ -1,6 +1,6 @@
 {
   "name": "hyparrows",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Visualize hyperlinks in a page with arrows",
   "main": "dist/index.js",
   "files": [
