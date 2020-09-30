@@ -2,7 +2,7 @@ import { Arrows } from './arrows';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-export const render = () => {
+export const render = (root: Element) => {
   const el = document.createElement('div');
 
   el.style.position = 'absolute';
@@ -13,5 +13,5 @@ export const render = () => {
 
   document.body.appendChild(el);
 
-  ReactDOM.render(<Arrows />, el);
+  ReactDOM.render(<Arrows root={root} />, el);
 };

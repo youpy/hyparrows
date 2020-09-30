@@ -4,7 +4,11 @@ import React from 'react';
 
 type LinksInPage = [HTMLAnchorElement, Element][];
 
-export const Arrows = () => {
+interface Props {
+  root: Element;
+}
+
+export const Arrows = ({ root }: Props) => {
   const [linksInPage, setLinksInPage] = useState<LinksInPage>([]);
   const [rev, setRev] = useState<number>(0);
 
@@ -24,7 +28,7 @@ export const Arrows = () => {
       subtree: true,
     };
 
-    observer.observe(document.body, config);
+    observer.observe(root, config);
 
     return () => {
       observer.disconnect();
@@ -32,7 +36,7 @@ export const Arrows = () => {
   });
 
   useMemo(() => {
-    const links = document.querySelectorAll('a');
+    const links = root.querySelectorAll('a');
     const lip: LinksInPage = [];
 
     links.forEach(
@@ -41,7 +45,7 @@ export const Arrows = () => {
 
         if (href && href.match(/^#/)) {
           const id = href.replace(/^#/, '');
-          const destination = document.querySelector(`[id="${id}"]`);
+          const destination = root.querySelector(`[id="${id}"]`);
 
           if (destination) {
             lip.push([link, destination]);
