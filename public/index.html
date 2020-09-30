@@ -1,39 +1,24 @@
 <html>
   <head>
     <style type="text/css">
-      p.link-to-foo {
-        position: absolute;
-        top: 600px;
-        left: 140px;
+      p {
+        padding: 3em;
       }
-
-      p.foo {
-        position: absolute;
-        top: 50px;
-        left: 540px;
-      }
-
-      p.link-to-bar {
-        position: absolute;
-        top: 200px;
-        left: 200px;
-      }
-
       p.bar {
-        position: absolute;
-        top: 600px;
-        left: 640px;
+        margin-left: 500px;
       }
     </style>
   </head>
   <body>
     <p class="foo"><a id="foo">foo</a></p>
-    <p class="link-to-foo">
-      <a href="#foo">link to foo</a>
-    </p>
+    <p></p>
+    <p></p>
     <p class="bar"><a id="bar">bar</a></p>
     <p class="link-to-bar">
       <a href="#bar">link to bar</a>
+    </p>
+    <p>
+      <a href="#foo">link to foo</a>
     </p>
     <script type="module">
       import { render } from './bundle.min.mjs';
