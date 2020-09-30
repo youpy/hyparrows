@@ -7,19 +7,37 @@
       p.bar {
         margin-left: 500px;
       }
+      a {
+        font-style: italic;
+      }
+
+      .rect {
+        display: block;
+        width: 100px;
+        height: 50px;
+        border: 2px solid #000;
+      }
+
+      #rect1 {
+        position: absolute;
+        top: 300px;
+        left: 300px;
+      }
     </style>
   </head>
   <body>
-    <p class="foo"><a id="foo">foo</a></p>
+    <p>
+      <a href="#rect1" class="rect"></a>
+    </p>
+    <p class="foo">This is <a id="foo">foo</a></p>
     <p></p>
     <p></p>
     <p class="bar"><a id="bar">bar</a></p>
     <p class="link-to-bar">
       <a href="#bar">link to bar</a>
     </p>
-    <p>
-      <a href="#foo">link to foo</a>
-    </p>
+    <p>This is a <a href="#foo">link to foo</a></p>
+    <p class="rect" id="rect1"></p>
     <script type="module">
       import { render } from './bundle.min.mjs';
 
