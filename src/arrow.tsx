@@ -23,12 +23,12 @@ export const Arrow = (props: Props) => {
     p2.w,
     p2.h,
     {
-      bow: 0.2,
-      stretch: 0.5,
+      bow: 0.1,
+      stretch: 0.1,
       stretchMin: 40,
       stretchMax: 420,
       padStart: 0,
-      padEnd: 20,
+      padEnd: 12,
       flip: false,
       straights: true,
     }
@@ -57,10 +57,10 @@ export const Arrow = (props: Props) => {
         fill="#000"
         strokeWidth={3}
       >
-        <circle cx={sx} cy={sy} r={4} />
+        <circle cx={sx} cy={sy} r={3} />
         <path d={`M${sx},${sy} Q${cx},${cy} ${ex},${ey}`} fill="none" />
         <polygon
-          points="0,-6 12,0, 0,6"
+          points="0,-4 8,0, 0,4"
           transform={`translate(${ex},${ey}) rotate(${endAngleAsDegrees})`}
         />
       </svg>
