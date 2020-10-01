@@ -1,6 +1,6 @@
 {
   "name": "hyparrows",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use arrows to visually connect hyperlinks within a page",
   "main": "dist/index.js",
   "files": [
