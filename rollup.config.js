@@ -57,6 +57,12 @@ export default [
       'preact/hooks',
       'preact',
     ],
-    plugins: [typescript()],
+    plugins: [
+      typescript({
+        declaration: true,
+        declarationDir: 'dist/types/',
+        rootDir: 'src/',
+      }),
+    ],
   },
 ];
