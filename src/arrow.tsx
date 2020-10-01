@@ -9,10 +9,22 @@ export const Arrow = (props: Props) => {
   const {
     linkInPage: [a, el],
   } = props;
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
   const r1 = a.getBoundingClientRect();
   const r2 = el.getBoundingClientRect();
-  const p1 = { x: r1.x, y: r1.y, w: r1.width, h: r1.height };
-  const p2 = { x: r2.x, y: r2.y, w: r2.width, h: r2.height };
+  const p1 = {
+    x: r1.x + scrollX,
+    y: r1.y + scrollY,
+    w: r1.width,
+    h: r1.height,
+  };
+  const p2 = {
+    x: r2.x + scrollX,
+    y: r2.y + scrollY,
+    w: r2.width,
+    h: r2.height,
+  };
   const arrow = getBoxToBoxArrow(
     p1.x,
     p1.y,
