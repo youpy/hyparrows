@@ -9,7 +9,6 @@ interface Props {
 
 export const Arrow = React.memo(
   (props: Props) => {
-    console.log(1);
     const { p1, p2 } = props;
     const arrow = getBoxToBoxArrow(
       p1.x,
